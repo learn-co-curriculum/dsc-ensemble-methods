@@ -9,7 +9,7 @@ In this lesson, we'll learn about **_Ensembles_** and why they're such an effect
 
 You will be able to:
 
-* Understand and explain emsemble methods
+* Understand and explain ensemble methods
 * Understand and explain the concept of bagging as it applies to ensemble methods
 * Understand and explain why ensemble methods are resilient to overfitting
 
@@ -19,7 +19,7 @@ In Data Science, the term **_Ensemble_** refers to a algorithm that makes use of
 
 ### Example 
 
-Consider the following scenario--you are looking to invest in a company, and you want to know if that company's stock will go up or down in the next year. Instead of just asking a single person, you have the following experts avaiable to you:
+Consider the following scenario--you are looking to invest in a company, and you want to know if that company's stock will go up or down in the next year. Instead of just asking a single person, you have the following experts available to you:
 
 1. **_Stock Broker_**. This person makes correct predictions 80% of the time. 
 2. **_Company Employee_**. This person is correct 65% of the time. 
@@ -36,14 +36,13 @@ Obviously, this analogy is a bit of an oversimplification--we're assuming that e
 
 ## Resiliency to Variance
 
-
 Ensemble Methods work off of the idea of the "Wisdom of the Crowd". This phrase refers to the phenomenon that the average estimate of all predictions typically outperforms any single prediction by a statistically significant margin--often, quite a large one.  A Finance Professor named Jack Treynor once demonstrated this with the classic jar full of jellybeans. Professor Treynor asked all 850 of his students to guess the number of jellybeans in the jar. When he averaged the guesses, he found that of all the guesses in the class, only one student had guessed a better estimate than the group average. 
 
 Think back to what you've learned about sampling, inferential statistics, and the Central Limit Theorem. The same magic is at work here. Estimators are rarely perfect. When professor Treynor asked each student to provide an estimate of the number of jellybeans in the jar, he found that the estimates were normally distributed. "The Wisdom of the Crowd" kicks in because people are just as likely to overestimate the number of jellybeans in the jar as to underestimate. Furthermore, since estimates are naturally normally distributed, we can expect the magnitude of over and underestimates to be roughly the same, meaning that the extra variance above and below essentially cancels each other out, leaving our average close to the ground-truth value! 
 
 Consider this top-right example in this graphic that visually demonstrates high variance:
 
-<img src='bias-and-variance.jpg'>
+<img src='images/bias-and-variance.jpg'>
 
 Most points miss the bullseye, but they are just as likely to miss in any direction. If we averaged all of these points, we would be extremely close to the bullseye! This is a great analogy for how Ensemble Methods work so well--we know that no model is likely to make perfect estimates, so we have many of them make predictions, and average them, knowing that the overestimates and the underestimates will likely cancel out to be very close to the ground-truth. The idea that the overestimates and underestimates will (at least partially) cancel each other out is sometimes referred to as **_Smoothing_**.  
 
@@ -66,7 +65,7 @@ The process for training an ensemble through bootstrap aggregation is as follows
 4. When making a prediction, have each classifier in the ensemble make a prediction.
 5. Aggregate all predictions from all classifiers into a single prediction, using the method of your choice. 
 
-<img src='bagging.png'>
+<img src='images/bagging.png'>
 
 Decision Trees are often used because they are very sensitive to variance. On their own, this is a weakness. However, when aggregated together into an ensemble, this actually becomes a good thing!
 
