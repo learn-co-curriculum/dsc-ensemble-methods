@@ -50,7 +50,7 @@ Most points miss the bullseye, but they are just as likely to miss in any direct
 
 For this section, we'll be focusing exclusively on tree-based ensemble methods, such as **_Random Forests_** and **_Gradient Boosted Trees_**. However, we can technically use any models in an ensemble! It's not uncommon to see **_Model Stacking_**, also called **_Meta-Ensembling_**. In this case, multiple different models are stacked, and their predictions are aggregated. In this case, the more different the models are, the better! The more different the models are, the more likely they may be to pick up on different things. It's not uncommon to see ensembles consisting of multiple Logistic Regressions, Naive Bayesian Classifiers, Tree-Based Models (including ensembles such as Random Forests), and even Deep Neural Networks!  
 
-For a much more in-depth explanation of what model stacking looks like and why it is effective, take a look at this great [article from Kaggle's blog, No Free Hunch!](http://localhost:8888/notebooks/index.ipynb#)
+For a much more in-depth explanation of what model stacking looks like and why it is effective, take a look at this great [article from Kaggle's blog, No Free Hunch!](http://blog.kaggle.com/2016/12/27/a-kagglers-guide-to-model-stacking-in-practice/)
 
 
 ## Bootstrap Aggregation
