@@ -65,10 +65,15 @@ The process for training an ensemble through bootstrap aggregation is as follows
 4. When making a prediction, have each classifier in the ensemble make a prediction.
 5. Aggregate all predictions from all classifiers into a single prediction, using the method of your choice. 
 
-<img src='images/bagging.png'>
+<img src='images/new_bagging.png'>
 
 Decision Trees are often used because they are very sensitive to variance. On their own, this is a weakness. However, when aggregated together into an ensemble, this actually becomes a good thing!
 
 ## Summary
 
 In this lesson, we learned about what constitutes an Ensemble, and how Bagging plays a central role in this. In the next lesson, we'll see how bagging is combined with another important technique to create one of the most effective Ensemble algorithms available today--**_Random Forests_**!
+
+
+```python
+
+```
