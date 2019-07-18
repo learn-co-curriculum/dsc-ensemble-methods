@@ -42,7 +42,7 @@ Think back to what you've learned about sampling, inferential statistics, and th
 
 Consider this top-right example in this graphic that visually demonstrates high variance:
 
-<img src='images/bias-and-variance.jpg'>
+<img src='images/new_bias-and-variance.png' width="600">
 
 Most points miss the bullseye, but they are just as likely to miss in any direction. If we averaged all of these points, we would be extremely close to the bullseye! This is a great analogy for how Ensemble Methods work so well--we know that no model is likely to make perfect estimates, so we have many of them make predictions, and average them, knowing that the overestimates and the underestimates will likely cancel out to be very close to the ground-truth. The idea that the overestimates and underestimates will (at least partially) cancel each other out is sometimes referred to as **_Smoothing_**.  
 
