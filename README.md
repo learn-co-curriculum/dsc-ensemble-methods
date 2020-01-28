@@ -9,7 +9,7 @@ In this lesson, we'll learn about **_ensembles_** and why they're such an effect
 
 You will be able to:
 
-- Explain what is meant by ensemble methods 
+- Explain what is meant by "ensemble methods"
 - Explain the concept of bagging as it applies to ensemble methods 
 
 
@@ -31,7 +31,7 @@ However, if we can use all three, we can combine their knowledge to increase our
 
 We can calculate this by multiplying the chances that each of them are wrong together, which is $ 0.2 * 0.35 * 0.15 = 0.0105\ error\ rate$, which means that our combined accuracy is $1 - 0.0105 = 0.9895$, or **_98.95%_**!  
 
-Obviously, this analogy is a bit of an oversimplification -- we're assuming that each prediction is independent, which is unlikely in the real world, since there's likely some overlap between the things each person is using to make their prediction. We also haven't calculated the accuracy percentages for the cases where they disagree. However, the main point of this example is that when we combine predictions, we get better overall results. 
+Obviously, this analogy is a bit of an oversimplification -- we're assuming that each prediction is independent, which is unlikely in the real world since there's likely some overlap between the things each person is using to make their prediction. We also haven't calculated the accuracy percentages for the cases where they disagree. However, the main point of this example is that when we combine predictions, we get better overall results. 
 
 
 ## Resiliency to variance
@@ -48,14 +48,14 @@ Most points miss the bullseye, but they are just as likely to miss in any direct
 
 ### Which models are used in ensembles?
 
-For this section, we'll be focusing exclusively on tree-based ensemble methods, such as **_Random forests_** and **_Gradient boosted trees_**. However, we can technically use any models in an ensemble! It's not uncommon to see **_Model stacking_**, also called **_Meta-ensembling_**, where multiple different models are stacked, and their predictions are aggregated. In this case, the more different the models are, the better! This is because the more different the models are, the more likely they have the potential to pick up on different characteristics of the data. It's not uncommon to see ensembles consisting of multiple logistic regressions, Naive Bayes classifiers, Tree-based models (including ensembles such as Random forests), and even deep neural networks!  
+For this section, we'll be focusing exclusively on tree-based ensemble methods, such as **_Random forests_** and **_Gradient boosted trees_**. However, we can technically use any models in an ensemble! It's not uncommon to see **_Model stacking_**, also called **_Meta-ensembling_**, where multiple different models are stacked, and their predictions are aggregated. In this case, the more different the models are, the better! This is because the more different the models are, the more likely they have the potential to pick up on different characteristics of the data. It's not uncommon to see ensembles consisting of multiple logistic regressions, Naive Bayes classifiers, Tree-based models (including ensembles such as random forests), and even deep neural networks!  
 
 For a much more in-depth explanation of what model stacking looks like and why it is effective, take a look at this great [article from Kaggle's blog, No Free Hunch!](http://blog.kaggle.com/2016/12/27/a-kagglers-guide-to-model-stacking-in-practice/)
 
 
 ## Bootstrap aggregation
 
-The main concept that makes ensembling possible is **_Bagging_**, which is short for **_Bootstrap AGGregation_**. Bootstrap aggregation is itself a combination of two ideas -- bootstrap resampling and aggregation. You're already familiar with bootstrap resampling from our section on the Central Limit theorem. It refers to the subsets of your dataset by sampling with replacement, much as we did to calculate our sample means when working with the Central Limit theorem. Aggregation is exactly as it sounds -- the practice of combining all the different estimates to arrive at a single estimate -- although the specifics for how we combine them are up to us. A common approach is to treat each classifier in the ensemble's prediction as a "vote" and let our overall prediction be the majority vote.  It's also common to see ensembles that take the arithmetic mean of all predictions, or compute a weighted average. 
+The main concept that makes ensembling possible is **_Bagging_**, which is short for **_Bootstrap Aggregation_**. Bootstrap aggregation is itself a combination of two ideas -- bootstrap resampling and aggregation. You're already familiar with bootstrap resampling from our section on the Central Limit theorem. It refers to the subsets of your dataset by sampling with replacement, much as we did to calculate our sample means when working with the Central Limit theorem. Aggregation is exactly as it sounds -- the practice of combining all the different estimates to arrive at a single estimate -- although the specifics for how we combine them are up to us. A common approach is to treat each classifier in the ensemble's prediction as a "vote" and let our overall prediction be the majority vote.  It's also common to see ensembles that take the arithmetic mean of all predictions, or compute a weighted average. 
 
 The process for training an ensemble through bootstrap aggregation is as follows:
 
