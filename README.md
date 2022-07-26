@@ -1,4 +1,3 @@
-
 # Ensemble Methods
 
 ## Introduction
@@ -42,7 +41,7 @@ Think back to what you've learned about sampling, inferential statistics, and th
 
 Consider the top-right example in this graphic that visually demonstrates high variance:
 
-<img src='images/new_bias-and-variance.png' width="600">
+<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-ensemble-methods/master/images/new_bias-and-variance.png' alt="four targets showing low and high variance on the x-axis and lot and high bias on the y-axis" width="600">
 
 Most points miss the bullseye, but they are just as likely to miss in any direction. If we averaged all of these points, we would be extremely close to the bullseye! This is a great analogy for how ensemble methods work so well -- we know that no model is likely to make perfect estimates, so we have many of them make predictions, and average them, knowing that the overestimates and the underestimates will likely cancel out to be very close to the ground truth. The idea that the overestimates and underestimates will (at least partially) cancel each other out is sometimes referred to as **_smoothing_**.  
 
@@ -65,7 +64,7 @@ The process for training an ensemble through bootstrap aggregation is as follows
 4. When making a prediction, have each classifier in the ensemble make a prediction 
 5. Aggregate all predictions from all classifiers into a single prediction, using the method of your choice  
 
-<img src='images/new_bagging.png'>
+<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-ensemble-methods/master/images/new_bagging.png' alt="flowchart of input sample being split into several bootstrap samples, then building several decision trees, then aggregation">
 
 Decision trees are often used because they are very sensitive to variance. On their own, this is a weakness. However, when aggregated together into an ensemble, this actually becomes a good thing!
 
